@@ -84,23 +84,29 @@
             </objects>
             <point key="canvasLocation" x="2480.8000000000002" y="341.37931034482762"/>
         </scene>
-        <!--View Controller-->
+        <!--Second Tab View Controller-->
         <scene sceneID="542-H6-x9n">
             <objects>
-                <viewController id="Lie-Sg-8ha" sceneMemberID="viewController">
+                <viewController id="Lie-Sg-8ha" customClass="SecondTabViewController" customModule="Werkstuk1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Wto-Ep-TVZ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Ek0-Ux-I3a">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ek0-Ux-I3a">
                                 <rect key="frame" x="0.0" y="20" width="375" height="598"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Lie-Sg-8ha" id="9uW-sj-S86"/>
+                                </connections>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="M0F-7q-QSz"/>
                     </view>
                     <tabBarItem key="tabBarItem" systemItem="more" id="cqb-wW-TyE"/>
+                    <connections>
+                        <outlet property="mapView" destination="Ek0-Ux-I3a" id="P95-Cc-BF9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FCb-q9-elT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

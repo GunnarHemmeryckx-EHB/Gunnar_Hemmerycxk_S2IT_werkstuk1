@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		9F97FD9E206EB97300A01C88 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F97FD9D206EB97300A01C88 /* AppDelegate.swift */; };
-		9F97FDA0206EB97300A01C88 /* SecondTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F97FD9F206EB97300A01C88 /* SecondTabViewController.swift */; };
 		9F97FDA3206EB97300A01C88 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F97FDA1206EB97300A01C88 /* Main.storyboard */; };
 		9F97FDA5206EB97400A01C88 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F97FDA4206EB97400A01C88 /* Assets.xcassets */; };
 		9F97FDA8206EB97400A01C88 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F97FDA6206EB97400A01C88 /* LaunchScreen.storyboard */; };
@@ -17,12 +16,12 @@
 		9F97FDB6206ECF8300A01C88 /* MyAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F97FDB5206ECF8300A01C88 /* MyAnnotation.swift */; };
 		9F97FDB9206EDC8500A01C88 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F97FDB8206EDC8500A01C88 /* MapKit.framework */; };
 		9F97FDBD206EE18200A01C88 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F97FDBC206EE18100A01C88 /* DetailViewController.swift */; };
+		9F97FDBF206EE33000A01C88 /* SecondTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F97FDBE206EE33000A01C88 /* SecondTabViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		9F97FD9A206EB97300A01C88 /* Werkstuk1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Werkstuk1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F97FD9D206EB97300A01C88 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9F97FD9F206EB97300A01C88 /* SecondTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondTabViewController.swift; sourceTree = "<group>"; };
 		9F97FDA2206EB97300A01C88 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9F97FDA4206EB97400A01C88 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9F97FDA7206EB97400A01C88 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -32,6 +31,7 @@
 		9F97FDB5206ECF8300A01C88 /* MyAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAnnotation.swift; sourceTree = "<group>"; };
 		9F97FDB8206EDC8500A01C88 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		9F97FDBC206EE18100A01C88 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		9F97FDBE206EE33000A01C88 /* SecondTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondTabViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,7 +67,6 @@
 			isa = PBXGroup;
 			children = (
 				9F97FD9D206EB97300A01C88 /* AppDelegate.swift */,
-				9F97FD9F206EB97300A01C88 /* SecondTabViewController.swift */,
 				9F97FDA1206EB97300A01C88 /* Main.storyboard */,
 				9F97FDA4206EB97400A01C88 /* Assets.xcassets */,
 				9F97FDA6206EB97400A01C88 /* LaunchScreen.storyboard */,
@@ -76,6 +75,7 @@
 				9F97FDB1206EC31700A01C88 /* TableViewController.swift */,
 				9F97FDB5206ECF8300A01C88 /* MyAnnotation.swift */,
 				9F97FDBC206EE18100A01C88 /* DetailViewController.swift */,
+				9F97FDBE206EE33000A01C88 /* SecondTabViewController.swift */,
 			);
 			path = Werkstuk1;
 			sourceTree = "<group>";
@@ -164,7 +164,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9F97FDA0206EB97300A01C88 /* SecondTabViewController.swift in Sources */,
+				9F97FDBF206EE33000A01C88 /* SecondTabViewController.swift in Sources */,
 				9F97FD9E206EB97300A01C88 /* AppDelegate.swift in Sources */,
 				9F97FDB6206ECF8300A01C88 /* MyAnnotation.swift in Sources */,
 				9F97FDBD206EE18200A01C88 /* DetailViewController.swift in Sources */,
