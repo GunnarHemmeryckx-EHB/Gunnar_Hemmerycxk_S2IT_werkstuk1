@@ -20,7 +20,16 @@ class Persoon: NSObject {
     var coordLong: Int = 0
     var coordLat: Int = 0
     
-    init(naam: String , voornaam: String,afbeelding: String,straat: String,huisnummer: Int,postcode: Int) {
-        
+    init(naam: String , voornaam: String,afbeelding: String,straat: String,huisnummer: Int,postcode: Int,gemeente: String,telefoonnummer: String,coordLat: Int,coordLong: Int) {
+        self.naam = naam
+        self.voornaam = voornaam
+        self.afbeelding = afbeelding
+        self.straat = straat
+        self.huisnummer = huisnummer
+        self.postcode = postcode
+        self.gemeente = gemeente
+        self.telefoonnummer = telefoonnummer
+        self.coordLat = coordLat
+        self.coordLong = coordLong
     }
 }
