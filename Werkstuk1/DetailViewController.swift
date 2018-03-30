@@ -11,24 +11,30 @@ import MapKit
 
 class DetailViewController: UIViewController {
 
-    @IBOutlet weak var persoonImage: UIImageView!
+    var persoon:Persoon?
     
     @IBOutlet weak var lblNaam: UILabel!
     @IBOutlet weak var lblStraat: UILabel!
-    
+    @IBOutlet weak var lblGemeente: UILabel!
+    @IBOutlet weak var persoonImage: UIImageView!
     @IBOutlet weak var mapView: MKMapView!
     
-    var persoon:Persoon?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-         self.persoonImage.image = UIImage(named: persoon!.afbeelding)
+
+        self.persoonImage.image = UIImage(named: persoon!.afbeelding)
         self.lblNaam.text = persoon!.voornaam + " " + persoon!.naam
-        self.lblStraat.text = persoon!.straat
+        self.lblStraat.text = persoon!.straat + " " + String(persoon!.huisnummer)
+        self.lblGemeente.text = persoon!.gemeente + " " + String(persoon!.postcode)
         
         let annotation = MyAnnotation(coordinate: CLLocationCoordinate2D(latitude: persoon!.coordLat, longitude: persoon!.coordLong), title: persoon!.voornaam + " " + persoon!.naam)
+        
+        let center = CLLocationCoordinate2D(latitude: persoon!.coordLat, longitude: persoon!.coordLong)
+        let span = MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
+        let region = MKCoordinateRegion(center: center, span: span)
         self.mapView.addAnnotation(annotation)
+        self.mapView.setRegion(region, animated: true)
         // Do any additional setup after loading the view.
     }
 
