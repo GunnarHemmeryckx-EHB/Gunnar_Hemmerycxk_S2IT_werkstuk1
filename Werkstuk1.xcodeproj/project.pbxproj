@@ -13,6 +13,8 @@
 		9F97FDA5206EB97400A01C88 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F97FDA4206EB97400A01C88 /* Assets.xcassets */; };
 		9F97FDA8206EB97400A01C88 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F97FDA6206EB97400A01C88 /* LaunchScreen.storyboard */; };
 		9F97FDB0206EBB4A00A01C88 /* Persoon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F97FDAF206EBB4A00A01C88 /* Persoon.swift */; };
+		9F97FDB2206EC31700A01C88 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F97FDB1206EC31700A01C88 /* TableViewController.swift */; };
+		9F97FDB4206EC84D00A01C88 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F97FDB3206EC84D00A01C88 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		9F97FDA7206EB97400A01C88 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9F97FDA9206EB97400A01C88 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9F97FDAF206EBB4A00A01C88 /* Persoon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persoon.swift; sourceTree = "<group>"; };
+		9F97FDB1206EC31700A01C88 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		9F97FDB3206EC84D00A01C88 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,8 @@
 				9F97FDA6206EB97400A01C88 /* LaunchScreen.storyboard */,
 				9F97FDA9206EB97400A01C88 /* Info.plist */,
 				9F97FDAF206EBB4A00A01C88 /* Persoon.swift */,
+				9F97FDB1206EC31700A01C88 /* TableViewController.swift */,
+				9F97FDB3206EC84D00A01C88 /* DetailViewController.swift */,
 			);
 			path = Werkstuk1;
 			sourceTree = "<group>";
@@ -140,7 +146,9 @@
 			files = (
 				9F97FDA0206EB97300A01C88 /* ViewController.swift in Sources */,
 				9F97FD9E206EB97300A01C88 /* AppDelegate.swift in Sources */,
+				9F97FDB4206EC84D00A01C88 /* DetailViewController.swift in Sources */,
 				9F97FDB0206EBB4A00A01C88 /* Persoon.swift in Sources */,
+				9F97FDB2206EC31700A01C88 /* TableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

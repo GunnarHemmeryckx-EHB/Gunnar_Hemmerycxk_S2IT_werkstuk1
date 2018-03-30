@@ -17,10 +17,10 @@ class Persoon: NSObject {
     var postcode: Int = 0
     var gemeente = ""
     var telefoonnummer = ""
-    var coordLong: Int = 0
-    var coordLat: Int = 0
+    var coordLong: Double = 0
+    var coordLat: Double = 0
     
-    init(naam: String , voornaam: String,afbeelding: String,straat: String,huisnummer: Int,postcode: Int,gemeente: String,telefoonnummer: String,coordLat: Int,coordLong: Int) {
+    init(naam: String , voornaam: String,afbeelding: String,straat: String,huisnummer: Int,postcode: Int,gemeente: String,telefoonnummer: String,coordLat: Double,coordLong: Double) {
         self.naam = naam
         self.voornaam = voornaam
         self.afbeelding = afbeelding
