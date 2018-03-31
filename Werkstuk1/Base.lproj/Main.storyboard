@@ -22,19 +22,23 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="JvK-Vo-xSp">
                                 <rect key="frame" x="0.0" y="409" width="375" height="258"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="258" id="weI-rr-NQk"/>
+                                    <constraint firstAttribute="height" constant="258" id="zA4-ly-rAo"/>
                                 </constraints>
                             </mapView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UTe-wG-AYV">
                                 <rect key="frame" x="16" y="64" width="177" height="202"/>
+                                <gestureRecognizers/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="202" id="hP8-1C-Wmi"/>
+                                    <constraint firstAttribute="height" constant="202" id="j7t-Wu-uB9"/>
                                 </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="w6F-qX-BP3" appends="YES" id="iZf-e4-i1L"/>
+                                </connections>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nVy-8f-TJ4">
                                 <rect key="frame" x="201" y="76" width="158" height="21"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="158" id="aLu-cd-gL8"/>
+                                    <constraint firstAttribute="width" constant="158" id="yQ8-Gz-8Js"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -55,20 +59,20 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="nVy-8f-TJ4" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="12" id="0Or-AO-wpb"/>
-                            <constraint firstItem="UTe-wG-AYV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="27b-eJ-yJ4"/>
-                            <constraint firstItem="nVy-8f-TJ4" firstAttribute="leading" secondItem="UTe-wG-AYV" secondAttribute="trailing" constant="8" symbolic="YES" id="4w3-lg-uVV"/>
-                            <constraint firstItem="iTv-Wo-HZv" firstAttribute="leading" secondItem="uvo-OI-emv" secondAttribute="leading" id="54G-2Y-hKp"/>
-                            <constraint firstAttribute="bottom" secondItem="JvK-Vo-xSp" secondAttribute="bottom" id="Ko0-RX-Yq3"/>
-                            <constraint firstItem="nVy-8f-TJ4" firstAttribute="leading" secondItem="iTv-Wo-HZv" secondAttribute="leading" id="OpU-uX-bVh"/>
-                            <constraint firstItem="uvo-OI-emv" firstAttribute="top" secondItem="iTv-Wo-HZv" secondAttribute="bottom" constant="8" symbolic="YES" id="QsO-3z-vBS"/>
-                            <constraint firstItem="iTv-Wo-HZv" firstAttribute="trailing" secondItem="uvo-OI-emv" secondAttribute="trailing" id="ZT8-o5-vVY"/>
-                            <constraint firstItem="UTe-wG-AYV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="c24-Du-hTs"/>
-                            <constraint firstItem="JvK-Vo-xSp" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="eKX-Ww-4aj"/>
-                            <constraint firstItem="nVy-8f-TJ4" firstAttribute="trailing" secondItem="iTv-Wo-HZv" secondAttribute="trailing" id="gw8-4j-Ngg"/>
-                            <constraint firstAttribute="trailing" secondItem="JvK-Vo-xSp" secondAttribute="trailing" id="jbt-k1-ng7"/>
-                            <constraint firstItem="iTv-Wo-HZv" firstAttribute="top" secondItem="nVy-8f-TJ4" secondAttribute="bottom" constant="8" symbolic="YES" id="k0S-OT-QZk"/>
-                            <constraint firstItem="nVy-8f-TJ4" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="oKH-BW-Kek"/>
+                            <constraint firstItem="nVy-8f-TJ4" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="3FB-Pd-m9a"/>
+                            <constraint firstItem="iTv-Wo-HZv" firstAttribute="trailing" secondItem="uvo-OI-emv" secondAttribute="trailing" id="5rR-fv-lzR"/>
+                            <constraint firstItem="nVy-8f-TJ4" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="12" id="BIP-vx-bJ5"/>
+                            <constraint firstItem="JvK-Vo-xSp" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="GH2-hW-Ufe"/>
+                            <constraint firstItem="nVy-8f-TJ4" firstAttribute="leading" secondItem="iTv-Wo-HZv" secondAttribute="leading" id="GKi-8z-RPk"/>
+                            <constraint firstAttribute="bottom" secondItem="JvK-Vo-xSp" secondAttribute="bottom" id="Hqm-Pb-IiH"/>
+                            <constraint firstItem="UTe-wG-AYV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="ODj-Ef-9Vy"/>
+                            <constraint firstAttribute="trailing" secondItem="JvK-Vo-xSp" secondAttribute="trailing" id="PQO-wt-Hd7"/>
+                            <constraint firstItem="nVy-8f-TJ4" firstAttribute="trailing" secondItem="iTv-Wo-HZv" secondAttribute="trailing" id="Xvu-Nv-BhO"/>
+                            <constraint firstItem="nVy-8f-TJ4" firstAttribute="leading" secondItem="UTe-wG-AYV" secondAttribute="trailing" constant="8" symbolic="YES" id="dE2-oN-VAp"/>
+                            <constraint firstItem="uvo-OI-emv" firstAttribute="top" secondItem="iTv-Wo-HZv" secondAttribute="bottom" constant="8" symbolic="YES" id="ho7-yB-e35"/>
+                            <constraint firstItem="UTe-wG-AYV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="hq5-w4-Rgj"/>
+                            <constraint firstItem="iTv-Wo-HZv" firstAttribute="top" secondItem="nVy-8f-TJ4" secondAttribute="bottom" constant="8" symbolic="YES" id="mwE-N9-NnM"/>
+                            <constraint firstItem="iTv-Wo-HZv" firstAttribute="leading" secondItem="uvo-OI-emv" secondAttribute="leading" id="uSC-VH-W0V"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -81,8 +85,38 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="w6F-qX-BP3">
+                    <connections>
+                        <action selector="tapFoto:" destination="BYZ-38-t0r" id="btU-Qb-mI1"/>
+                        <segue destination="LaR-ti-ogM" kind="show" identifier="naarImageView" id="TDp-HQ-wHx"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2480.8000000000002" y="341.37931034482762"/>
+        </scene>
+        <!--Image View Controller-->
+        <scene sceneID="3Qg-xC-0Gn">
+            <objects>
+                <viewController id="LaR-ti-ogM" customClass="ImageViewController" customModule="Werkstuk1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7yi-vn-fc2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aoF-VR-tAr">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="XoX-Zd-Sel"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageGroot" destination="aoF-VR-tAr" id="Pox-Aj-Q2b"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CMi-bz-2iF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3277.5999999999999" y="340.47976011994007"/>
         </scene>
         <!--Second Tab View Controller-->
         <scene sceneID="542-H6-x9n">
