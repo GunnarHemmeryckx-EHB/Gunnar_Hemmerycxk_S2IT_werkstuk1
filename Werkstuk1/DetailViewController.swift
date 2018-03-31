@@ -36,7 +36,6 @@ class DetailViewController: UIViewController {
         let region = MKCoordinateRegion(center: center, span: span)
         self.mapView.addAnnotation(annotation)
         self.mapView.setRegion(region, animated: true)
-        // Do any additional setup after loading the view.
     }
     
     override func didReceiveMemoryWarning() {
@@ -51,20 +50,20 @@ class DetailViewController: UIViewController {
     }
     
     
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     
-     if segue.identifier == "naarImageView" {
-     if let nextVC = segue.destination as? ImageViewController {
-     nextVC.persoon = self.persoon
-     }
-     }
-     
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
-     
+    // MARK: - Navigation
+    
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "naarImageView" {
+            if let nextVC = segue.destination as? ImageViewController {
+                nextVC.persoon = self.persoon
+            }
+        }
+        
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
+    }
+    
     
 }

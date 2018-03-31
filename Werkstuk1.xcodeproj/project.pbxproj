@@ -11,6 +11,9 @@
 		9F82C3ED206F7AC7007BCE56 /* BobaFett.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9F82C3E9206F7AC7007BCE56 /* BobaFett.jpg */; };
 		9F82C3EE206F7AC7007BCE56 /* Chewbacca.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F82C3EA206F7AC7007BCE56 /* Chewbacca.png */; };
 		9F82C3EF206F7AC7007BCE56 /* QuiGon_Jinn.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F82C3EB206F7AC7007BCE56 /* QuiGon_Jinn.png */; };
+		9F82C3FE206F846F007BCE56 /* person.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F82C3FC206F846F007BCE56 /* person.png */; };
+		9F82C3FF206F846F007BCE56 /* location.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F82C3FD206F846F007BCE56 /* location.png */; };
+		9F82C401206F8B52007BCE56 /* ToevoegenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F82C400206F8B52007BCE56 /* ToevoegenViewController.swift */; };
 		9F97FD9E206EB97300A01C88 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F97FD9D206EB97300A01C88 /* AppDelegate.swift */; };
 		9F97FDA3206EB97300A01C88 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F97FDA1206EB97300A01C88 /* Main.storyboard */; };
 		9F97FDA5206EB97400A01C88 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F97FDA4206EB97400A01C88 /* Assets.xcassets */; };
@@ -29,6 +32,9 @@
 		9F82C3E9206F7AC7007BCE56 /* BobaFett.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = BobaFett.jpg; sourceTree = "<group>"; };
 		9F82C3EA206F7AC7007BCE56 /* Chewbacca.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Chewbacca.png; sourceTree = "<group>"; };
 		9F82C3EB206F7AC7007BCE56 /* QuiGon_Jinn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QuiGon_Jinn.png; sourceTree = "<group>"; };
+		9F82C3FC206F846F007BCE56 /* person.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = person.png; sourceTree = "<group>"; };
+		9F82C3FD206F846F007BCE56 /* location.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = location.png; sourceTree = "<group>"; };
+		9F82C400206F8B52007BCE56 /* ToevoegenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToevoegenViewController.swift; sourceTree = "<group>"; };
 		9F97FD9A206EB97300A01C88 /* Werkstuk1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Werkstuk1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F97FD9D206EB97300A01C88 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9F97FDA2206EB97300A01C88 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -59,6 +65,8 @@
 		9F82C3E7206F7AA6007BCE56 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				9F82C3FD206F846F007BCE56 /* location.png */,
+				9F82C3FC206F846F007BCE56 /* person.png */,
 				9F82C3E9206F7AC7007BCE56 /* BobaFett.jpg */,
 				9F82C3EA206F7AC7007BCE56 /* Chewbacca.png */,
 				9F82C3E8206F7AC7007BCE56 /* ObiWanKenobi.jpg */,
@@ -99,6 +107,7 @@
 				9F97FDBC206EE18100A01C88 /* DetailViewController.swift */,
 				9F97FDBE206EE33000A01C88 /* SecondTabViewController.swift */,
 				9F97FDC0206EEC8F00A01C88 /* ImageViewController.swift */,
+				9F82C400206F8B52007BCE56 /* ToevoegenViewController.swift */,
 			);
 			path = Werkstuk1;
 			sourceTree = "<group>";
@@ -178,6 +187,8 @@
 				9F97FDA5206EB97400A01C88 /* Assets.xcassets in Resources */,
 				9F82C3ED206F7AC7007BCE56 /* BobaFett.jpg in Resources */,
 				9F82C3EE206F7AC7007BCE56 /* Chewbacca.png in Resources */,
+				9F82C3FF206F846F007BCE56 /* location.png in Resources */,
+				9F82C3FE206F846F007BCE56 /* person.png in Resources */,
 				9F97FDA3206EB97300A01C88 /* Main.storyboard in Resources */,
 				9F82C3EC206F7AC7007BCE56 /* ObiWanKenobi.jpg in Resources */,
 				9F82C3EF206F7AC7007BCE56 /* QuiGon_Jinn.png in Resources */,
@@ -194,6 +205,7 @@
 				9F97FDBF206EE33000A01C88 /* SecondTabViewController.swift in Sources */,
 				9F97FD9E206EB97300A01C88 /* AppDelegate.swift in Sources */,
 				9F97FDB6206ECF8300A01C88 /* MyAnnotation.swift in Sources */,
+				9F82C401206F8B52007BCE56 /* ToevoegenViewController.swift in Sources */,
 				9F97FDC1206EEC9000A01C88 /* ImageViewController.swift in Sources */,
 				9F97FDBD206EE18200A01C88 /* DetailViewController.swift in Sources */,
 				9F97FDB0206EBB4A00A01C88 /* Persoon.swift in Sources */,

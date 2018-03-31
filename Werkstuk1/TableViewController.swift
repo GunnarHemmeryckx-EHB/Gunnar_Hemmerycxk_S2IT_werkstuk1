@@ -6,10 +6,16 @@
 //  Copyright © 2018 Gunnar Hemmeryckx. All rights reserved.
 //
 
+
+//TABBAR ICONEN VAN: https://www.flaticon.com
 import UIKit
 
 class TableViewController: UITableViewController {
     
+    
+    
+    var tempPersoon:Persoon?
+    //PERSONEN OBJECT MAKEN
     var persoon1 = Persoon(naam: "Kenobi", voornaam: "Obi-wan", afbeelding: "ObiWanKenobi", straat: "Jundland Wastes", huisnummer: 3, postcode: 1374, gemeente: "Tatooine", telefoonnummer: "0455671023", coordLat: 33.740833, coordLong: 10.734951)
     var persoon2 = Persoon(naam: "Jinn", voornaam: "Qui-Gon", afbeelding: "QuiGon_Jinn", straat: "Form IV", huisnummer: 12, postcode: 1734, gemeente: "Ataru", telefoonnummer: "0434211697", coordLat: 41.073485, coordLong: 14.327004)
     var persoon3 = Persoon(naam: "Boba", voornaam: "Fett", afbeelding: "BobaFett", straat: "Great Pit of Carkoon", huisnummer: 1, postcode: 1373, gemeente: "Tatooine", telefoonnummer: "0454102201", coordLat: 32.377246, coordLong: -113.891700)
@@ -21,10 +27,14 @@ class TableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //PERSONEN TOEVOEGEN AAN ARRAY
         persoonArray.append(persoon1)
         persoonArray.append(persoon2)
         persoonArray.append(persoon3)
         persoonArray.append(persoon4)
+        if(tempPersoon != nil){
+            persoonArray.append(tempPersoon!)
+        }
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
         
@@ -53,9 +63,9 @@ class TableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "persoonCell", for: indexPath)
         
-        // Configure the cell...
-        cell.imageView?.image = UIImage(named: persoonArray[indexPath.row].afbeelding)//CELL IMAGE INSTELLEN -> GAAT ZOEKEN NAAR EEN IMAGE IN ASSETS MET MEEGEGEVEN NAAM
-        cell.textLabel?.text = persoonArray[indexPath.row].voornaam + " " + persoonArray[indexPath.row].naam//CELL TITEL = TITEL VAN ITEM
+        
+        cell.imageView?.image = UIImage(named: persoonArray[indexPath.row].afbeelding)
+        cell.textLabel?.text = persoonArray[indexPath.row].voornaam + " " + persoonArray[indexPath.row].naam
         
         return cell
     }

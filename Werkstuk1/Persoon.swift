@@ -9,14 +9,15 @@
 import UIKit
 
 class Persoon: NSObject {
-    var naam = ""
-    var voornaam = ""
-    var afbeelding = ""
-    var straat = ""
+    
+    var naam:String = ""
+    var voornaam:String = ""
+    var afbeelding:String = ""
+    var straat:String = ""
     var huisnummer: Int = 0
     var postcode: Int = 0
-    var gemeente = ""
-    var telefoonnummer = ""
+    var gemeente:String = ""
+    var telefoonnummer:String = ""
     var coordLong: Double = 0
     var coordLat: Double = 0
     
