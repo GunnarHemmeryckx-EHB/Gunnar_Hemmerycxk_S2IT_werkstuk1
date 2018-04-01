@@ -25,6 +25,7 @@
 		9F97FDBD206EE18200A01C88 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F97FDBC206EE18100A01C88 /* DetailViewController.swift */; };
 		9F97FDBF206EE33000A01C88 /* SecondTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F97FDBE206EE33000A01C88 /* SecondTabViewController.swift */; };
 		9F97FDC1206EEC9000A01C88 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F97FDC0206EEC8F00A01C88 /* ImageViewController.swift */; };
+		9FBEC226207182AD0041D0CF /* blank_profile.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FBEC225207182AD0041D0CF /* blank_profile.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		9F97FDBC206EE18100A01C88 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		9F97FDBE206EE33000A01C88 /* SecondTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondTabViewController.swift; sourceTree = "<group>"; };
 		9F97FDC0206EEC8F00A01C88 /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
+		9FBEC225207182AD0041D0CF /* blank_profile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blank_profile.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				9F82C3FC206F846F007BCE56 /* person.png */,
 				9F82C3E9206F7AC7007BCE56 /* BobaFett.jpg */,
 				9F82C3EA206F7AC7007BCE56 /* Chewbacca.png */,
+				9FBEC225207182AD0041D0CF /* blank_profile.png */,
 				9F82C3E8206F7AC7007BCE56 /* ObiWanKenobi.jpg */,
 				9F82C3EB206F7AC7007BCE56 /* QuiGon_Jinn.png */,
 			);
@@ -191,6 +194,7 @@
 				9F82C3FE206F846F007BCE56 /* person.png in Resources */,
 				9F97FDA3206EB97300A01C88 /* Main.storyboard in Resources */,
 				9F82C3EC206F7AC7007BCE56 /* ObiWanKenobi.jpg in Resources */,
+				9FBEC226207182AD0041D0CF /* blank_profile.png in Resources */,
 				9F82C3EF206F7AC7007BCE56 /* QuiGon_Jinn.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

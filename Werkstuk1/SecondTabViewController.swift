@@ -35,7 +35,7 @@ class SecondTabViewController: UIViewController,MKMapViewDelegate {
         
         //VOOR IEDERE PERSOON IN DE ARRAY EEN ANNATATION TOEVOEGEN
         for persoon in persoonArray {
-            let annotation = MyAnnotation(coordinate: CLLocationCoordinate2D(latitude: persoon.coordLat, longitude: persoon.coordLong), title: persoon.voornaam + " " + persoon.naam)
+            let annotation = MyAnnotation(coordinate: CLLocationCoordinate2D(latitude: persoon.coordLat, longitude: persoon.coordLong), title: persoon.voornaam + " " + persoon.naam,  subtitle: "Lat: " + String(persoon.coordLat) + " Long:" + String(persoon.coordLong))
             self.mapView.addAnnotation(annotation)
         }
     }

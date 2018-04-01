@@ -29,7 +29,7 @@ class DetailViewController: UIViewController {
         self.lblStraat.text = persoon!.straat + " " + String(persoon!.huisnummer)
         self.lblGemeente.text = persoon!.gemeente + " " + String(persoon!.postcode)
         
-        let annotation = MyAnnotation(coordinate: CLLocationCoordinate2D(latitude: persoon!.coordLat, longitude: persoon!.coordLong), title: persoon!.voornaam + " " + persoon!.naam)
+        let annotation = MyAnnotation(coordinate: CLLocationCoordinate2D(latitude: persoon!.coordLat, longitude: persoon!.coordLong), title: persoon!.voornaam + " " + persoon!.naam, subtitle: "Lat: " + String(persoon!.coordLat) + " Long:" + String(persoon!.coordLong))
         
         let center = CLLocationCoordinate2D(latitude: persoon!.coordLat, longitude: persoon!.coordLong)
         let span = MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
