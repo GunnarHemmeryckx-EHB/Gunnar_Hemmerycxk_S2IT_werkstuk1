@@ -56,8 +56,15 @@ class ToevoegenViewController: UIViewController, UIPickerViewDataSource, UIPicke
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let vc = segue.destination as? TableViewController{
-            let persoon = Persoon(naam: self.txtNaam.text!, voornaam: self.txtVoornaam.text!, afbeelding: selectedName!, straat: self.txtStraat.text!, huisnummer: Int(self.txtHuisNr.text!)!, postcode: Int(self.txtPostcode.text!)!, gemeente: self.txtGemeente.text!, telefoonnummer: self.txtTelefoonNr.text!, coordLat: Double(self.txtLatitude.text!)!, coordLong: Double(self.txtLongitude.text!)!)
-            vc.tempPersoon = persoon
+            if (selectedName != nil){
+                let persoon = Persoon(naam: self.txtNaam.text!, voornaam: self.txtVoornaam.text!, afbeelding: selectedName!, straat: self.txtStraat.text!, huisnummer: Int(self.txtHuisNr.text!)!, postcode: Int(self.txtPostcode.text!)!, gemeente: self.txtGemeente.text!, telefoonnummer: self.txtTelefoonNr.text!, coordLat: Double(self.txtLatitude.text!)!, coordLong: Double(self.txtLongitude.text!)!)
+                vc.tempPersoon = persoon
+            }
+            else{
+                let persoon = Persoon(naam: self.txtNaam.text!, voornaam: self.txtVoornaam.text!, afbeelding: "blank_profile", straat: self.txtStraat.text!, huisnummer: Int(self.txtHuisNr.text!)!, postcode: Int(self.txtPostcode.text!)!, gemeente: self.txtGemeente.text!, telefoonnummer: self.txtTelefoonNr.text!, coordLat: Double(self.txtLatitude.text!)!, coordLong: Double(self.txtLongitude.text!)!)
+                vc.tempPersoon = persoon
+            }
+            
         }
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
