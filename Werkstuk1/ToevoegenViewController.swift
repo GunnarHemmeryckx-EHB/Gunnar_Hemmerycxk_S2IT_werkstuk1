@@ -21,19 +21,19 @@ class ToevoegenViewController: UIViewController, UIPickerViewDataSource, UIPicke
     @IBOutlet weak var txtLongitude: UITextField!
     @IBOutlet weak var txtTelefoonNr: UITextField!
     @IBOutlet weak var afbNamePicker: UIPickerView!
-    var selectedName:String?
+    
+    var textFields = [UITextField]()
+    var selectedImageNaam:String?
     
     let imgNamen = ["blank_profile","BobaFett", "ObiWanKenobi", "QuiGon_Jinn","Chewbacca"]
     override func viewDidLoad() {
         
+        self.textFields = [self.txtNaam,self.txtVoornaam,self.txtStraat,self.txtHuisNr,self.txtGemeente,self.txtPostcode,self.txtLatitude,self.txtLongitude,self.txtTelefoonNr]
         super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     //Werking UIPicker dankzij: https://www.youtube.com/watch?v=tGr7qsKGkzY&ab_channel=TheSwiftGuy
@@ -47,29 +47,51 @@ class ToevoegenViewController: UIViewController, UIPickerViewDataSource, UIPicke
         return imgNamen.count
     }
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        selectedName = imgNamen[row]
+        selectedImageNaam = imgNamen[row]
     }
-    
     
     // MARK: - Navigation
     
+    
+    //ER VOOR ZORGEN DAT MEN NIET ALTIJD TERUG SEGUE NAAR DEZE PAGINA : https://medium.com/@mimicatcodes/create-unwind-segues-in-swift-3-8793f7d23c6f
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let vc = segue.destination as? TableViewController{
-            if (selectedName != nil){
-                let persoon = Persoon(naam: self.txtNaam.text!, voornaam: self.txtVoornaam.text!, afbeelding: selectedName!, straat: self.txtStraat.text!, huisnummer: Int(self.txtHuisNr.text!)!, postcode: Int(self.txtPostcode.text!)!, gemeente: self.txtGemeente.text!, telefoonnummer: self.txtTelefoonNr.text!, coordLat: Double(self.txtLatitude.text!)!, coordLong: Double(self.txtLongitude.text!)!)
-                vc.tempPersoon = persoon
+        if segue.identifier == "unwindSegueToTable" {
+            if let vc = segue.destination as? TableViewController{
+                for textField in textFields{
+                    if validate(textField: textField) {
+                        if(selectedImageNaam != nil){
+                            let persoon = Persoon(naam: self.txtNaam.text!, voornaam: self.txtVoornaam.text!, afbeelding: selectedImageNaam!, straat: self.txtStraat.text!, huisnummer: Int(self.txtHuisNr.text!)!, postcode: Int(self.txtPostcode.text!)!, gemeente: self.txtGemeente.text!, telefoonnummer: self.txtTelefoonNr.text!, coordLat: Double(self.txtLatitude.text!)!, coordLong: Double(self.txtLongitude.text!)!)
+                            vc.tempPersoon = persoon
+                            
+                        }
+                        else{
+                            let persoon = Persoon(naam: self.txtNaam.text!, voornaam: self.txtVoornaam.text!, afbeelding: "blank_profile", straat: self.txtStraat.text!, huisnummer: Int(self.txtHuisNr.text!)!, postcode: Int(self.txtPostcode.text!)!, gemeente: self.txtGemeente.text!, telefoonnummer: self.txtTelefoonNr.text!, coordLat: Double(self.txtLatitude.text!)!, coordLong: Double(self.txtLongitude.text!)!)
+                            vc.tempPersoon = persoon
+                            
+                        }
+                    } else {
+                        textField.layer.borderColor = UIColor.red.cgColor
+                    }
+                }
+                
             }
-            else{
-                let persoon = Persoon(naam: self.txtNaam.text!, voornaam: self.txtVoornaam.text!, afbeelding: "blank_profile", straat: self.txtStraat.text!, huisnummer: Int(self.txtHuisNr.text!)!, postcode: Int(self.txtPostcode.text!)!, gemeente: self.txtGemeente.text!, telefoonnummer: self.txtTelefoonNr.text!, coordLat: Double(self.txtLatitude.text!)!, coordLong: Double(self.txtLongitude.text!)!)
-                vc.tempPersoon = persoon
-            }
-            
         }
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }
-
+    
+    func validate(textField: UITextField) -> Bool {
+        guard let text = textField.text,
+            !text.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines).isEmpty else {
+                // this will be reached if the text is nil (unlikely)
+                // or if the text only contains white spaces
+                // or no text at all
+                return false
+        }
+        
+        return true
+    }
     
     
 }

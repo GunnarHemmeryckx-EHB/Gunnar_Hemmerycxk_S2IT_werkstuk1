@@ -15,11 +15,12 @@ class TableViewController: UITableViewController {
     
     
     var tempPersoon:Persoon?
-    //PERSONEN OBJECT MAKEN
+    //PERSONEN OBJECT(EN) MAKEN
     var persoon1 = Persoon(naam: "Kenobi", voornaam: "Obi-wan", afbeelding: "ObiWanKenobi", straat: "Jundland Wastes", huisnummer: 3, postcode: 1374, gemeente: "Tatooine", telefoonnummer: "0455671023", coordLat: 33.740833, coordLong: 10.734951)
     var persoon2 = Persoon(naam: "Jinn", voornaam: "Qui-Gon", afbeelding: "QuiGon_Jinn", straat: "Form IV", huisnummer: 12, postcode: 1734, gemeente: "Ataru", telefoonnummer: "0434211697", coordLat: 41.073485, coordLong: 14.327004)
-    var persoon3 = Persoon(naam: "Boba", voornaam: "Fett", afbeelding: "BobaFett", straat: "Great Pit of Carkoon", huisnummer: 1, postcode: 1373, gemeente: "Tatooine", telefoonnummer: "0454102201", coordLat: 32.377246, coordLong: -113.891700)
+    var persoon3 = Persoon(naam: "Fett", voornaam: "Boba", afbeelding: "BobaFett", straat: "Great Pit of Carkoon", huisnummer: 1, postcode: 1373, gemeente: "Tatooine", telefoonnummer: "0454102201", coordLat: 32.377246, coordLong: -113.891700)
     var persoon4 = Persoon(naam: "(Chewie)", voornaam: "Chewbacca", afbeelding: "Chewbacca", straat: "Forest", huisnummer: 6, postcode: 1823, gemeente: "Kashyyyk", telefoonnummer: "0446123434", coordLat: 8.247011, coordLong: 98.563542)
+    var persoon5 = Persoon(naam: "Doe", voornaam: "John", afbeelding: "blank_profile", straat: "Infinite Loop", huisnummer: 2, postcode: 95014, gemeente: "Cupertino", telefoonnummer: "0452952205", coordLat: 37.332308, coordLong: -122.030784)
     
     //ARRAY AANMAKEN
     var persoonArray = [Persoon]()
@@ -32,6 +33,8 @@ class TableViewController: UITableViewController {
         persoonArray.append(persoon2)
         persoonArray.append(persoon3)
         persoonArray.append(persoon4)
+        persoonArray.append(persoon5)
+        //PERSOON TOEVEOGEN DIE IS AANGEMAAKT IN DE TOEVOEGEN VIEW
         if(tempPersoon != nil){
             persoonArray.append(tempPersoon!)
         }
@@ -106,6 +109,9 @@ class TableViewController: UITableViewController {
      }
      */
     
+    @IBAction func unwindToTableVC(segue:UIStoryboardSegue) {
+        
+    }
     
     // MARK: - Navigation
     
@@ -113,11 +119,12 @@ class TableViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        
+        //SEGUE NAAR DETAILPAGINA
         if let nextvc = segue.destination as? DetailViewController {
             let indexpath = self.tableView.indexPathForSelectedRow!
             nextvc.persoon = self.persoonArray[indexpath.row]
         }
     }
-    
     
 }

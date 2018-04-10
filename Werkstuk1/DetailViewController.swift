@@ -17,6 +17,7 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var lblStraat: UILabel!
     @IBOutlet weak var lblGemeente: UILabel!
     @IBOutlet weak var persoonImage: UIImageView!
+    @IBOutlet weak var lblTelefoonNr: UILabel!
     @IBOutlet weak var mapView: MKMapView!
     
     
@@ -28,6 +29,7 @@ class DetailViewController: UIViewController {
         self.lblNaam.text = persoon!.voornaam + " " + persoon!.naam
         self.lblStraat.text = persoon!.straat + " " + String(persoon!.huisnummer)
         self.lblGemeente.text = persoon!.gemeente + " " + String(persoon!.postcode)
+        self.lblTelefoonNr.text = persoon!.telefoonnummer
         
         let annotation = MyAnnotation(coordinate: CLLocationCoordinate2D(latitude: persoon!.coordLat, longitude: persoon!.coordLong), title: persoon!.voornaam + " " + persoon!.naam, subtitle: "Lat: " + String(persoon!.coordLat) + " Long:" + String(persoon!.coordLong))
         
@@ -54,7 +56,7 @@ class DetailViewController: UIViewController {
     
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
+        //SEGUE NAAR DE GROTERE AFBEELDING
         if segue.identifier == "naarImageView" {
             if let nextVC = segue.destination as? ImageViewController {
                 nextVC.persoon = self.persoon
