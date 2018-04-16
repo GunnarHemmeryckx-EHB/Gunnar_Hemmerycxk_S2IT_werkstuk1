@@ -33,7 +33,8 @@ class TableViewController: UITableViewController {
         persoonArray.append(persoon3)
         persoonArray.append(persoon4)
         persoonArray.append(persoon5)
-        //PERSOON TOEVEOGEN DIE IS AANGEMAAKT IN DE TOEVOEGEN VIEW
+        
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
         
@@ -68,12 +69,16 @@ class TableViewController: UITableViewController {
         return cell
     }
     
+    //Passing Data: Segue and Unwind | Swift 4, Xcode 9
     //https://www.youtube.com/watch?v=XjBqKaGiZws&ab_channel=KiloLoco
+    //GERAADPLEEGD OP: April 10, 2018
     @IBAction func unwindToTableVC(segue:UIStoryboardSegue) {
         guard let toevoegVC = segue.source as? ToevoegenViewController else{return}
         let textFields = [toevoegVC.txtNaam,toevoegVC.txtVoornaam,toevoegVC.txtStraat,toevoegVC.txtHuisNr,toevoegVC.txtGemeente,toevoegVC.txtPostcode,toevoegVC.txtLatitude,toevoegVC.txtLongitude,toevoegVC.txtTelefoonNr]
         var persoon:Persoon
         
+        
+        //PERSOON TOEVEOGEN DIE IS AANGEMAAKT IN DE TOEVOEGEN VIEW
         if(toevoegVC.selectedImageNaam != nil){
             persoon = Persoon(naam: toevoegVC.txtNaam.text!, voornaam: toevoegVC.txtVoornaam.text!, afbeelding: toevoegVC.selectedImageNaam!, straat: toevoegVC.txtStraat.text!, huisnummer: Int(toevoegVC.txtHuisNr.text!)!, postcode: Int(toevoegVC.txtPostcode.text!)!, gemeente: toevoegVC.txtGemeente.text!, telefoonnummer: toevoegVC.txtTelefoonNr.text!, coordLat: Double(toevoegVC.txtLatitude.text!)!, coordLong: Double(toevoegVC.txtLongitude.text!)!)
             self.persoonArray.append(persoon)
@@ -85,43 +90,6 @@ class TableViewController: UITableViewController {
         print("HIER:\(persoon.naam)")
         tableView.reloadData()
     }
-
-    
-    /*
-     // Override to support conditional editing of the table view.
-     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-     // Return false if you do not want the specified item to be editable.
-     return true
-     }
-     */
-    
-    /*
-     // Override to support editing the table view.
-     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-     if editingStyle == .delete {
-     // Delete the row from the data source
-     tableView.deleteRows(at: [indexPath], with: .fade)
-     } else if editingStyle == .insert {
-     // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-     }
-     }
-     */
-    
-    /*
-     // Override to support rearranging the table view.
-     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-     
-     }
-     */
-    
-    /*
-     // Override to support conditional rearranging of the table view.
-     override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-     // Return false if you do not want the item to be re-orderable.
-     return true
-     }
-     */
-    
     
     
     // MARK: - Navigation
