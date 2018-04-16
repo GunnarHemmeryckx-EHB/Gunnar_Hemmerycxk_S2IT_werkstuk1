@@ -14,7 +14,6 @@ class TableViewController: UITableViewController {
     
     
     
-    var tempPersoon:Persoon?
     //PERSONEN OBJECT(EN) MAKEN
     var persoon1 = Persoon(naam: "Kenobi", voornaam: "Obi-wan", afbeelding: "ObiWanKenobi", straat: "Jundland Wastes", huisnummer: 3, postcode: 1374, gemeente: "Tatooine", telefoonnummer: "0455671023", coordLat: 33.740833, coordLong: 10.734951)
     var persoon2 = Persoon(naam: "Jinn", voornaam: "Qui-Gon", afbeelding: "QuiGon_Jinn", straat: "Form IV", huisnummer: 12, postcode: 1734, gemeente: "Ataru", telefoonnummer: "0434211697", coordLat: 41.073485, coordLong: 14.327004)
@@ -35,16 +34,12 @@ class TableViewController: UITableViewController {
         persoonArray.append(persoon4)
         persoonArray.append(persoon5)
         //PERSOON TOEVEOGEN DIE IS AANGEMAAKT IN DE TOEVOEGEN VIEW
-        if(tempPersoon != nil){
-            persoonArray.append(tempPersoon!)
-        }
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
         
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -73,6 +68,24 @@ class TableViewController: UITableViewController {
         return cell
     }
     
+    //https://www.youtube.com/watch?v=XjBqKaGiZws&ab_channel=KiloLoco
+    @IBAction func unwindToTableVC(segue:UIStoryboardSegue) {
+        guard let toevoegVC = segue.source as? ToevoegenViewController else{return}
+        let textFields = [toevoegVC.txtNaam,toevoegVC.txtVoornaam,toevoegVC.txtStraat,toevoegVC.txtHuisNr,toevoegVC.txtGemeente,toevoegVC.txtPostcode,toevoegVC.txtLatitude,toevoegVC.txtLongitude,toevoegVC.txtTelefoonNr]
+        var persoon:Persoon
+        
+        if(toevoegVC.selectedImageNaam != nil){
+            persoon = Persoon(naam: toevoegVC.txtNaam.text!, voornaam: toevoegVC.txtVoornaam.text!, afbeelding: toevoegVC.selectedImageNaam!, straat: toevoegVC.txtStraat.text!, huisnummer: Int(toevoegVC.txtHuisNr.text!)!, postcode: Int(toevoegVC.txtPostcode.text!)!, gemeente: toevoegVC.txtGemeente.text!, telefoonnummer: toevoegVC.txtTelefoonNr.text!, coordLat: Double(toevoegVC.txtLatitude.text!)!, coordLong: Double(toevoegVC.txtLongitude.text!)!)
+            self.persoonArray.append(persoon)
+        }
+        else{
+            persoon = Persoon(naam: toevoegVC.txtNaam.text!, voornaam: toevoegVC.txtVoornaam.text!, afbeelding: "blank_profile", straat: toevoegVC.txtStraat.text!, huisnummer: Int(toevoegVC.txtHuisNr.text!)!, postcode: Int(toevoegVC.txtPostcode.text!)!, gemeente: toevoegVC.txtGemeente.text!, telefoonnummer: toevoegVC.txtTelefoonNr.text!, coordLat: Double(toevoegVC.txtLatitude.text!)!, coordLong: Double(toevoegVC.txtLongitude.text!)!)
+            self.persoonArray.append(persoon)
+        }
+        print("HIER:\(persoon.naam)")
+        tableView.reloadData()
+    }
+
     
     /*
      // Override to support conditional editing of the table view.
@@ -109,9 +122,7 @@ class TableViewController: UITableViewController {
      }
      */
     
-    @IBAction func unwindToTableVC(segue:UIStoryboardSegue) {
-        
-    }
+    
     
     // MARK: - Navigation
     

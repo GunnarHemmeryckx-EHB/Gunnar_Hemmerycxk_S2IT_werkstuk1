@@ -50,6 +50,8 @@ class ToevoegenViewController: UIViewController, UIPickerViewDataSource, UIPicke
         selectedImageNaam = imgNamen[row]
     }
     
+    
+    /*
     // MARK: - Navigation
     
     
@@ -80,7 +82,7 @@ class ToevoegenViewController: UIViewController, UIPickerViewDataSource, UIPicke
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }
-    
+    */
     func validate(textField: UITextField) -> Bool {
         guard let text = textField.text,
             !text.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines).isEmpty else {
